@@ -7,9 +7,9 @@
 
   <% @phenotypes.each do |phenotype| %>
     <tr>
-      <td bgcolor="#99CC00" align="right" nowrap><%= phenotype.phenotype.display_name %></td>
-      <td bgcolor="#FFFFFF" valign="top" width="200"><%= phenotype.summary.score %></td>
-      <td bgcolor="#FFFFFF" valign="top" width="150"><%= phenotype.summary.text %></td>
+      <td bgcolor="#99CC00" align="right" nowrap><%= phenotype.table.phenotype.table.display_name %></td>
+      <td bgcolor="#FFFFFF" valign="top" width="200"><%= phenotype.table.summary.table.score %></td>
+      <td bgcolor="#FFFFFF" valign="top" width="150"><%= phenotype.table.summary.table.text %></td>
     </tr>
   <% end %>
 </table>
