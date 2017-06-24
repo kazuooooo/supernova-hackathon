@@ -1,35 +1,34 @@
 class AwakensClient
 
-  include Singleton
-
   attr_accessor :client, :token
 
   TOKEN_URL = 'https://genomicexplorer.io/v0/api-token-auth/'
-  CATEGORY  = 'food-and-nutrition'
+  FOOD_CATEGORY  = 'food-and-nutrition'
 
-  def initialize
+  def initialize(user)
     @client  = HTTPClient.new
     payload  = {
-        username: 'g-supernova-a1',
-        password: '6yudwn9Lc6bna'
+        username: user.name,
+        password: user.password
     }
     response = client.post TOKEN_URL, body: payload
     @token   = JSON.parse(response.body)['token']
   end
 
   def get_phenotypes
-    phenotypes = get_category_phenotype_list(CATEGORY)
+    phenotypes = get_category_phenotype_list(FOOD_CATEGORY)
     phenotypes.map { |phenotype| get_phenotype(phenotype) }
   end
 
   def get_phenotype(phenotype)
-    phenotype = 'eye-color'
     response  = client.get report_url(phenotype), {}, header
     JSON.parse(response.body, object_class: OpenStruct)
   end
 
   def get_category_phenotype_list(category_name)
-
+    res = client.get category_url(category_name), {}, header
+    ops = JSON.parse(res.body, object_class: OpenStruct)
+    ops.phenotypes.map{|p| p.name}
   end
 
   private
@@ -44,7 +43,7 @@ class AwakensClient
   end
 
   def category_url(category_name)
-    "https://genomicexplorer.io/v0/reports/#{category_name}"
+    "https://genomicexplorer.io/v0/reports/?category=#{category_name}"
   end
 
 end
