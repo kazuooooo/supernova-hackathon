@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'PixelGosub';
+  src: url('../font/Pixel_Gosub.otf') format('opentype')
+}
+*{
+  font-family: 'PixelGosub';
+}
+
+body {
+  padding-top: 50px;
+}
+
+.wrap {
+    padding: 10px;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*マッチング画面*/
+#ripple{
+    height: 100%;
+}
+#ripple .circle{
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #00c5f8;
+    z-index: -1;
+}
+#ripple div:nth-child(1){
+    width: 10px;
+    height: 10px;
+    top: calc(80% - 10px/2);
+    left: calc(50% - 10px/2);
+}
+#ripple div:nth-child(2){
+    width: 150px;
+    height: 150px;
+    top: calc(80% - 150px/2);
+    left: calc(50% - 150px/2);
+}
+#ripple div:nth-child(3){
+    width: 300px;
+    height: 300px;
+    top: calc(80% - 300px/2);
+    left: calc(50% - 300px/2);
+}
+#ripple div:nth-child(4){
+    width: 450px;
+    height: 450px;
+    top: calc(80% - 450px/2);
+    left: calc(50% - 450px/2);
+}
+#ripple div:nth-child(5){
+    width: 600px;
+    height: 600px;
+    top: calc(80% - 600px/2);
+    left: calc(50% - 600px/2);
+}
+#ripple div:nth-child(6){
+    width: 750px;
+    height: 750px;
+    top: calc(80% - 750px/2);
+    left: calc(50% - 750px/2);
+}
+.triangle img{
+    position: absolute;
+    top: calc(80% - 21px);
+    left: calc(50% - 21px);
+    width: 42px;
+}
+#icon_wrap .icon{
+    position: absolute;
+}
+#icon_wrap img{
+    width: 60px;
+}
+#user1{
+    top: 200px;
+    left: 340px;
+}
+#user2{
+    top: 400px;
+    left: 310px;
+}
+#user3{
+    top: 230px;
+    left: 900px;
+}
+#user4{
+    top: 330px;
+    left: 600px;
+}
+#user5{
+    top: 500px;
+    left: 900px;
+}
+.non_active{
+    border-radius: 50%;
+    border: solid 3px #00c5f8;
+}
