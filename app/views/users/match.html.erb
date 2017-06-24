@@ -1,0 +1,9 @@
+<ul>
+  <%- @shops.each do |shop| %>
+      <div style="margin: 20px; background-color: skyblue">
+        <%- shop.to_h.keys.each do |key| %>
+            <li><%= "#{key} : #{shop.send(key)}" %></li>
+        <%- end %>
+      </div>
+  <%- end %>
+</ul>
