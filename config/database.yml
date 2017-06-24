@@ -48,7 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: makakoi_production
-  username: makakoi
-  password: <%= ENV['MAKAKOI_DATABASE_PASSWORD'] %>
+ <<: *default
+ adapter: postgresql
+ encoding: unicode
+ pool: 5
