@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def match
     users = params[:users]
+    #  user_phenotypes = users.map{|user| user.get_phenotypes}
     user_phenotypes = User.all.map{|user| user.get_phenotypes}
     @calc_result = Calculator.instance.sum(user_phenotypes)
     keywords    = Detector(calc_result)
