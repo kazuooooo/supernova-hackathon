@@ -1,0 +1,15 @@
+<table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+  <tr>
+    <th bgcolor="#EE0000"><font color="#FFFFFF">項目名</font></th>
+    <th bgcolor="#EE0000" width="150"><font color="#FFFFFF">スコア</font></th>
+    <th bgcolor="#EE0000" width="200"><font color="#FFFFFF">説明</font></th>
+  </tr>
+
+  <% @phenotypes.each do |phenotype| %>
+    <tr>
+      <td bgcolor="#99CC00" align="right" nowrap><%= phenotype.phenotype.display_name %></td>
+      <td bgcolor="#FFFFFF" valign="top" width="200"><%= phenotype.summary.score %></td>
+      <td bgcolor="#FFFFFF" valign="top" width="150"><%= phenotype.summary.text %></td>
+    </tr>
+  <% end %>
+</table>
