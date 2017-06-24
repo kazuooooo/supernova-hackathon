@@ -4,17 +4,22 @@
 }
 *{
   font-family: 'PixelGosub';
+  color: #00c5f8;
 }
 
 body {
   padding-top: 50px;
 }
 
+/* 共通 */
 .wrap {
     padding: 10px;
     text-align: center;
     height: 100vh;
     overflow: hidden;
+}
+.icon{
+    width: 60px;
 }
 
 /*マッチング画面*/
@@ -69,11 +74,8 @@ body {
     left: calc(50% - 21px);
     width: 42px;
 }
-#icon_wrap .icon{
+#icon_wrap div{
     position: absolute;
-}
-#icon_wrap img{
-    width: 60px;
 }
 #user1{
     top: 200px;
