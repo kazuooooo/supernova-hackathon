@@ -17,6 +17,6 @@ class ShopClient
   end
 
   def url(keyword )
-    "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=ca50732adf405e08&keyword=#{keyword}&range=5&lat=35.6&lng=139.7&format=json"
+    URI.encode("http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=ca50732adf405e08&keyword=#{keyword}&range=5&lat=35.6&lng=139.7&format=json")
   end
 end
