@@ -202,3 +202,40 @@ html{
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+/*リザルト画面*/
+.result_wrap h3{
+    text-align: center;
+}
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 10px;
+    border: solid 3px  #00c5f8;
+}
+
+.flex-left {
+    /*border: solid 3px  #00c5f8;*/
+    width: 50%;
+    padding: 10px;
+}
+
+.flex-right {
+    width: 50%;
+}
+.sotre p{
+    text-align: left;
+    margin: 0;
+    padding: 1px;
+}
+.store_name{
+    font-weight: bold;
+}
+.rank,
+.store_address, 
+.money,
+.tabelog_link{
+    font-size: 0.5em;
+}
+.food_img img{
+    width: 100%;
+}
