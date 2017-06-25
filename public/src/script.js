@@ -4,6 +4,6 @@ $(".icon_wrap .icon").click(function(){
     $(this).addClass("active");
   }else{
     $(this).removeClass("active");
-    $(this).addClass("non-active");
+    $(this).addClass("non_active");
   }
 });
