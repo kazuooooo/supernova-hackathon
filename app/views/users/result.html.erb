@@ -1,0 +1,32 @@
+<table>
+  <%- @shops.each_with_index do |shop, idx| %>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td> Recommend <%= idx %></td>
+            </tr>
+            <tr>
+              <td><%= shop.name %></td>
+            </tr>
+            <tr>
+              <td><%= shop.address %></td>
+            </tr>
+            <tr>
+              <td<%= shop.open %></td>
+            </tr>
+            <tr>
+              <td><%= shop.budget.average %></td>
+            </tr>
+            <!--<tr>-->
+            <!--<td><%= shop.contact %></td>-->
+            <!--</tr>-->
+          </table>
+        <td>
+          <%- if shop.photo.pc.l %>
+              <%= image_tag(shop.photo.pc.l) %>
+          <%- end %>
+        </td>
+      </tr>
+  <%- end %>
+</table>
