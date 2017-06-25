@@ -35,23 +35,23 @@
     </div>
     <div id="users">
       <div id="user1">
-        <div class="icon_wrap"><%= image_tag("icon/kanao.png", {"class" => "icon non_active"})%></div>
+        <div class="icon_wrap"><%= image_tag("icon/kanao.png", {"class" => "icon non_active", "id" => 1})%></div>
         <p class="name">kanao</p>
       </div>
       <div id="user2">
-        <div class="icon_wrap"><%= image_tag("icon/ikemura.png", {"class" => "icon non_active"})%></div>
+        <div class="icon_wrap"><%= image_tag("icon/ikemura.png", {"class" => "icon non_active", "id" => 2})%></div>
         <p class="name">ikemura</p>
       </div>
       <div id="user3">
-        <div class="icon_wrap"><%= image_tag("icon/komuro.png", {"class" => "icon non_active"})%></div>
+        <div class="icon_wrap"><%= image_tag("icon/komuro.png", {"class" => "icon non_active", "id" => 3})%></div>
         <p class="name">komuro</p>
       </div>
       <div id="user4">
-        <div class="icon_wrap"><%= image_tag("icon/matsumoto.png", {"class" => "icon non_active"})%></div>
+        <div class="icon_wrap"><%= image_tag("icon/matsumoto.png", {"class" => "icon non_active", "id" => 4})%></div>
         <p class="name">matsumoto</p>
       </div>
       <div id="user5">
-        <div class="icon_wrap"><%= image_tag("icon/matuda.png", {"class" => "icon non_active"})%></div>
+        <div class="icon_wrap"><%= image_tag("icon/matuda.png", {"class" => "icon non_active", "id" => 5})%></div>
         <p class="name">matsuda</p>
       </div>
     </div>
@@ -63,7 +63,7 @@
   <div class="category">
     <div class="row">
       <div class="col-xs-12">
-        <button class="btn">
+        <button class="btn" onclick="goToEnquete()">
           <span class="category_title"><<%= image_tag("pict/restraunt_title.png", {"class" => "category_title"})%></span><br>
           <img <%= image_tag("pict/restraunt.png", {"class" => "pict"})%>>
         </button>
@@ -75,8 +75,7 @@
       <div class="col-xs-12">
         <button class="btn">
           <span class="category_title"><<%= image_tag("pict/hobby_title.png", {"class" => "category_title"})%></span><br>
-          <img <%= image_tag("pict/healthcare.png", {"class" => "pict"})%>>
-          <img class="pict" src="./img/pict/holiday.png">
+          <img <%= image_tag("pict/holiday.png", {"class" => "pict"})%>>
         </button>
         <button class="btn">
           <span class="category_title"><<%= image_tag("pict/hobby_title.png", {"class" => "category_title"})%></span><br>
@@ -86,4 +85,27 @@
     </div>
   </div>
 </div>
-<%= link_to("アンケートへ", survey_user_path(1, users: [1, 2, 3])) %>
+<script>
+  $(function() {
+
+    $(".icon_wrap .icon").click(function(){
+      if($(this).hasClass("non_active")){ // クリックされた要素がclickedクラスだったら
+        $(this).removeClass("non_active");
+        $(this).addClass("active");
+      }else{
+        $(this).removeClass("active");
+        $(this).addClass("non_active");
+      }
+    });
+  });
+  function goToEnquete(){
+    var arr = []
+    $( ".icon.active" ).each(function() {
+      arr.push("users%5B%5D=" + this.id)
+    });
+    var param = arr.join("&");
+    // TODO: production書き換え
+    var url = "http://localhost:3000/users/1/survey?" + param
+    window.location.href = url
+  }
+</script>
