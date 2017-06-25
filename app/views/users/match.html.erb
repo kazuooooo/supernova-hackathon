@@ -31,7 +31,7 @@
       <div class="circle"></div>
       <div class="circle"></div>
       <!--<div class="circle"></div>-->
-      <div class="triangle"><img src="./img/matching_center.png"></div>
+      <div class="triangle"><%= image_tag("matching_center.png") %></div>
     </div>
     <div id="users">
       <div id="user1">
@@ -58,36 +58,32 @@
   </div>
 
   <div class="arrow">
-    <img src="./img/icon_tringle.png">
+    <%= image_tag("icon_triangle.png") %>
   </div>
   <div class="category">
     <div class="row">
       <div class="col-xs-12">
         <button class="btn">
-          <span class="category_title"><img src="./img/pict/restraunt_title.png"></span><br>
-          <img class="pict" src="./img/pict/restraunt.png">
+          <span class="category_title"><<%= image_tag("pict/restraunt_title.png", {"class" => "category_title"})%></span><br>
+          <img <%= image_tag("pict/restraunt.png", {"class" => "pict"})%>>
         </button>
         <button class="btn">
-          <span class="category_title"><img src="./img/pict/healthcare_title.png"></span><br>
-          <img class="pict" src="./img/pict/healthcare.png">
+          <span class="category_title"><<%= image_tag("pict/healthcare_title.png", {"class" => "category_title"})%></span><br>
+          <img <%= image_tag("pict/healthcare.png", {"class" => "pict"})%>>
         </button>
       </div>
       <div class="col-xs-12">
         <button class="btn">
-          <span class="category_title"><img src="./img/pict/hobby_title.png"></span><br>
+          <span class="category_title"><<%= image_tag("pict/hobby_title.png", {"class" => "category_title"})%></span><br>
+          <img <%= image_tag("pict/healthcare.png", {"class" => "pict"})%>>
           <img class="pict" src="./img/pict/holiday.png">
         </button>
         <button class="btn">
-          <span class="category_title"><img src="./img/pict/hobby_title.png"></span><br>
-          <img class="pict" src="./img/pict/hobby.png">
+          <span class="category_title"><<%= image_tag("pict/hobby_title.png", {"class" => "category_title"})%></span><br>
+          <img <%= image_tag("pict/hobby.png", {"class" => "pict"})%>>
         </button>
       </div>
     </div>
   </div>
 </div>
-<!-- Place your content here -->
-<!-- SCRIPTS -->
-<script src="../lib/jquery-3.2.1.min.js"></script>
-<script src="./src/script.js"></script>
-<script src="../lib/bootstrap.min.js"></script>
 <%= link_to("アンケートへ", survey_user_path(1, users: [1, 2, 3])) %>

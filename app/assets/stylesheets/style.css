@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PixelGosub';
-    src: url('../font/Pixel_Gosub.otf') format('opentype')
+    src: asset-url('Pixel_Gosub.otf')
 }
 *{
     font-family: 'PixelGosub';
