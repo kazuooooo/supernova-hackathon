@@ -4,7 +4,7 @@
         <td>
           <table>
             <tr>
-              <td> Recommend <%= idx %></td>
+              <td> オススメ <%= idx %></td>
             </tr>
             <tr>
               <td><%= shop.name %></td>
@@ -18,9 +18,9 @@
             <tr>
               <td><%= shop.budget.average %></td>
             </tr>
-            <!--<tr>-->
-            <!--<td><%= shop.contact %></td>-->
-            <!--</tr>-->
+            <tr>
+              <td><%= link_to(shop.contact, "食べログで見る") %></td>
+            </tr>
           </table>
         <td>
           <%- if shop.photo.pc.l %>

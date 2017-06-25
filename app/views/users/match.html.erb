@@ -1,0 +1,93 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+              aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Project name</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">Menu1</a></li>
+        <li><a href="#contact">Menu2</a></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+  <div class="wrap">
+    <!--<h1>Searching....</h1>-->
+    <!--<p class="lead"></p>-->
+    <div id="ripple">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <!--<div class="circle"></div>-->
+      <div class="triangle"><img src="./img/matching_center.png"></div>
+    </div>
+    <div id="users">
+      <div id="user1">
+        <div class="icon_wrap"><%= image_tag("icon/kanao.png", {"class" => "icon non_active"})%></div>
+        <p class="name">kanao</p>
+      </div>
+      <div id="user2">
+        <div class="icon_wrap"><%= image_tag("icon/ikemura.png", {"class" => "icon non_active"})%></div>
+        <p class="name">ikemura</p>
+      </div>
+      <div id="user3">
+        <div class="icon_wrap"><%= image_tag("icon/komuro.png", {"class" => "icon non_active"})%></div>
+        <p class="name">komuro</p>
+      </div>
+      <div id="user4">
+        <div class="icon_wrap"><%= image_tag("icon/matsumoto.png", {"class" => "icon non_active"})%></div>
+        <p class="name">matsumoto</p>
+      </div>
+      <div id="user5">
+        <div class="icon_wrap"><%= image_tag("icon/matuda.png", {"class" => "icon non_active"})%></div>
+        <p class="name">matsuda</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow">
+    <img src="./img/icon_tringle.png">
+  </div>
+  <div class="category">
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn">
+          <span class="category_title"><img src="./img/pict/restraunt_title.png"></span><br>
+          <img class="pict" src="./img/pict/restraunt.png">
+        </button>
+        <button class="btn">
+          <span class="category_title"><img src="./img/pict/healthcare_title.png"></span><br>
+          <img class="pict" src="./img/pict/healthcare.png">
+        </button>
+      </div>
+      <div class="col-xs-12">
+        <button class="btn">
+          <span class="category_title"><img src="./img/pict/hobby_title.png"></span><br>
+          <img class="pict" src="./img/pict/holiday.png">
+        </button>
+        <button class="btn">
+          <span class="category_title"><img src="./img/pict/hobby_title.png"></span><br>
+          <img class="pict" src="./img/pict/hobby.png">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Place your content here -->
+<!-- SCRIPTS -->
+<script src="../lib/jquery-3.2.1.min.js"></script>
+<script src="./src/script.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
+<%= link_to("アンケートへ", survey_user_path(1, users: [1, 2, 3])) %>
