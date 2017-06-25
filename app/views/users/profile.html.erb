@@ -1,15 +1,25 @@
-<table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-  <tr>
-    <th bgcolor="#EE0000"><font color="#FFFFFF">項目名</font></th>
-    <th bgcolor="#EE0000" width="150"><font color="#FFFFFF">スコア</font></th>
-    <th bgcolor="#EE0000" width="200"><font color="#FFFFFF">説明</font></th>
-  </tr>
-
-  <% @phenotypes.each do |phenotype| %>
-    <tr>
-      <td bgcolor="#99CC00" align="right" nowrap><%= phenotype.table.phenotype.table.display_name %></td>
-      <td bgcolor="#FFFFFF" valign="top" width="200"><%= phenotype.table.summary.table.score %></td>
-      <td bgcolor="#FFFFFF" valign="top" width="150"><%= phenotype.table.summary.table.text %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="container">
+  <div class="wrap">
+    <h3>Your Profile</h3>
+    <%= render :partial => "user_icon", :locals => { :name => User.first.nick_name, :icon_path => User.first.icon_path } %>
+    <table class="my_trend table table-striped table-hover ">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>項目</th>
+        <th>スコア</th>
+        <th>詳細</th>
+      </tr>
+      </thead>
+      <tbody>
+        <% @phenotypes.each do |phenotype| %>
+            <tr>
+              <td><%= phenotype.table.phenotype.table.display_name %></td>
+              <td><%= phenotype.table.summary.table.score %></td>
+              <td><%= phenotype.table.summary.table.text %></td>
+            </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

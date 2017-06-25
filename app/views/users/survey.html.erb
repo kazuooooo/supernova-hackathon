@@ -1,1 +1,81 @@
-<%= link_to("結果へ", result_users_path(users: @inherited_params_users)) %>
+<h1> TELL ME YOUR FEELING ?</H1>
+<h6>(選択肢は未実装)</h6>
+<table>
+  <tr>
+    <td align="left"> 1. 今日は胃が健康だ！</td>
+    <td>
+      <form>
+        <div class="space">
+          <%= image_tag("yes_hover_off.png", { style: "width: 20%; height: 20%" }) %>
+          <%= image_tag("no_hover_on.png", { style: "width: 20%; height: 20%" }) %>
+        </div>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td align="left">
+      2. お酒を飲みたい気分
+    </td>
+    <td>
+      <form>
+        <div class="space">
+          <%= image_tag("yes_hover_on.png", { style: "width: 20%; height: 20%" }) %>
+          <%= image_tag("no_hover_off.png", { style: "width: 20%; height: 20%" }) %>
+        </div>
+      </form>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="left">
+      3. 安い場所がいい
+    </td>
+    <td>
+      <form>
+        <div class="space">
+          <%= image_tag("yes_hover_off.png", { style: "width: 20%; height: 20%" }) %>
+          <%= image_tag("no_hover_off.png", { style: "width: 20%; height: 20%" }) %>
+        </div>
+      </form>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="left">
+      4. 接待である
+    </td>
+    <td>
+      <form>
+        <div class="space">
+          <%= image_tag("yes_hover_off.png", { style: "width: 20%; height: 20%" }) %>
+          <%= image_tag("no_hover_off.png", { style: "width: 20%; height: 20%" }) %>
+        </div>
+      </form>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="left">
+      5. 友達同士で語り合いたい
+    </td>
+    <td>
+      <form>
+        <div class="space">
+          <%= image_tag("yes_hover_off.png", { style: "width: 20%; height: 20%" }) %>
+          <%= image_tag("no_hover_off.png", { style: "width: 20%; height: 20%" }) %>
+        </div>
+      </form>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="submit">
+  <%= link_to("Submit", result_users_path(users: @inherited_params_users)) %>
+</div>
+<style>
+  td {width: 50%;}
+  table {margin-left: 16px;}
+  #submit {margin-left: 16px; margin-top: 16px}
+</style>

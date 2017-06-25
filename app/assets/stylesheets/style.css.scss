@@ -2,26 +2,52 @@
     font-family: 'PixelGosub';
     src: asset-url('Pixel_Gosub.otf')
 }
+
+@font-face {
+  font-family: 'FutoGoB';
+  src: asset-url('A-OTF-FutoGoB101Pro-Bold.otf')
+}
+
 *{
-    font-family: 'PixelGosub';
-    color: #00c5f8;
+  font-family: 'PixelGosub';
+  color: #00c5f8;
 }
 
 body {
-    /*overflow: hidden;*/
-    padding-top: 50px;
+  /*overflow: hidden;*/
+  padding-top: 50px;
+  height: 100%;
+}
+html{
+  height: 100%;
 }
 
 /* 共通 */
 .wrap {
-    padding: 10px;
-    text-align: center;
-    height: 75vh;
-    overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  height: 75vh;
+  overflow: hidden;
 }
 .icon{
-    width: 60px;
-    border-radius: 50%;
+  width: 60px;
+  border-radius: 50%;
+}
+.navbar-brand .img-rounded {
+  width:44px;
+  margin-top:-10px;
+}
+.profile_btn{
+  right: 0;
+  display: inline-block;
+  position: absolute;
+  color: #fba138;
+}
+.profile_btn:visited{
+  color: #fba138;
+}
+.profile_btn:hover{
+  color: #fcc07b;
 }
 
 /*マッチング画面*/
@@ -29,119 +55,189 @@ body {
 
 }
 #ripple .circle{
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid #00c5f8;
-    z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #00c5f8;
+  z-index: -1;
 }
 #ripple div:nth-child(1){
-    width: 10px;
-    height: 10px;
-    top: calc(52% - 10px/2);
-    left: calc(50% - 10px/2);
+  width: 10px;
+  height: 10px;
+  top: calc(52% - 10px/2);
+  left: calc(50% - 10px/2);
 }
 #ripple div:nth-child(2){
-    width: 100px;
-    height: 100px;
-    top: calc(52% - 100px/2);
-    left: calc(50% - 100px/2);
+  width: 100px;
+  height: 100px;
+  top: calc(52% - 100px/2);
+  left: calc(50% - 100px/2);
 }
 #ripple div:nth-child(3){
-    width: 200px;
-    height: 200px;
-    top: calc(52% - 200px/2);
-    left: calc(50% - 200px/2);
+  width: 200px;
+  height: 200px;
+  top: calc(52% - 200px/2);
+  left: calc(50% - 200px/2);
 }
 #ripple div:nth-child(4){
-    width: 300px;
-    height: 300px;
-    top: calc(52% - 300px/2);
-    left: calc(50% - 300px/2);
+  width: 300px;
+  height: 300px;
+  top: calc(52% - 300px/2);
+  left: calc(50% - 300px/2);
 }
 #ripple div:nth-child(5){
-    width: 400px;
-    height: 400px;
-    top: calc(52% - 400px/2);
-    left: calc(50% - 400px/2);
+  width: 400px;
+  height: 400px;
+  top: calc(52% - 400px/2);
+  left: calc(50% - 400px/2);
 }
 
 .triangle img{
-    position: absolute;
-    top: calc(52% - 32px);
-    left: calc(50% - 32px);
-    width: 64px;
+  position: absolute;
+  top: calc(52% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
 }
 #users div{
-    position: absolute;
-    width: 60px;
+  position: absolute;
+  width: 60px;
 }
 #users .name{
-    margin: 60px auto 0;
+  margin: 60px auto 0;
 }
 #user1{
-    top: calc(52% - 230px);
-    left: calc(50%);
+  top: calc(52% - 230px);
+  left: calc(50%);
 }
 #user2{
-    top: calc(52%);
-    left: calc(50% + 100px);
+  top: calc(52%);
+  left: calc(50% + 100px);
 }
 #user3{
-    top: calc(52%);
-    left: calc(50% - 120px);
+  top: calc(52%);
+  left: calc(50% - 120px);
 }
 #user4{
-    top: calc(52% - 90px);
-    left: calc(50% + 90px);
+  top: calc(52% - 90px);
+  left: calc(50% + 90px);
 }
 #user5{
-    top: calc(52% - 220px);
-    left: calc(50% - 100px);
+  top: calc(52% - 220px);
+  left: calc(50% - 100px);
 }
 .icon.non_active{
-    border: solid 5px #00c5f8;
+  border: solid 5px #00c5f8;
 }
 .icon.active{
-    border: solid 5px #fba138;
+  border: solid 5px #fba138;
+}
+.name.non_active{
+  color: #00c5f8;
+}
+.name.active{
+  color: #fba138;
 }
 .arrow{
-    text-align: center;
-    height: 80px;
-    line-height: 80px;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
 }
 .arrow img{
-    width: 80px;
-    height: 40px;
-    transform: rotate(-180deg);
+  width: 80px;
+  height: 40px;
+  transform: rotate(-180deg);
+
 }
 
 /* グループ */
 #matched_group{
-    text-align: center;
-    padding: 20px;
-    margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
 }
 .matched_user{
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 .category button{
-    width: 40%;
-    height: 80px;
-    margin: 15px 2%;
-    background-color: #00c5f8;
-    border-radius: 5px;
+  width: 40%;
+  height: 80px;
+  margin: 15px 2%;
+  background-color: #00c5f8;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .category div {
-    text-align: center;
+  text-align: center;
 }
 .category_title{
-    margin-top: -10px;
+  margin-top: -10px;
 }
 .category_title img{
-    height: 15px;
+  height: 15px;
 }
 .pict{
-    height: 40px;
-    vertical-align: bottom;
+  height: 40px;
+  vertical-align: bottom;
+}
+
+/*プロフィール*/
+.my_trend{
+  margin-top: 30px;
+}
+.my_trend td, .my_trend th{
+  font-family: 'FutoGoB';
+  text-align: center;
+}
+/*登録画面*/
+.register{
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.register button{
+  color: #fff;
+  background-color: #00c5f8;
+  width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+/*リザルト画面*/
+.result_wrap h3{
+  text-align: center;
+}
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 10px;
+  border: solid 3px  #00c5f8;
+}
+
+.flex-left {
+  /*border: solid 3px  #00c5f8;*/
+  width: 50%;
+  padding: 10px;
+}
+
+.flex-right {
+  width: 50%;
+}
+.sotre p{
+  text-align: left;
+  margin: 0;
+  padding: 1px;
+}
+.store_name{
+  font-weight: bold;
+}
+.rank,
+.store_address,
+.money,
+.tabelog_link{
+  font-size: 0.5em;
+}
+.food_img img{
+  width: 100%;
 }

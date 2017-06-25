@@ -1,6 +1,3 @@
-<%- @users.each do |user| %>
-    <%= render :partial => "user_icon", :locals => { :name => user.nick_name, :icon_path => user.icon_path } %>
-<%- end %>
 <div>
   <%- @keywords.each do |keyword| %>
       <li>
@@ -10,35 +7,30 @@
       </li>
   <%- end %>
 </div>
-<table>
-  <%- @shops.each_with_index do |shop, idx| %>
-      <tr>
-        <td>
-          <table>
-            <tr>
-              <td> オススメ <%= idx %></td>
-            </tr>
-            <tr>
-              <td><%= shop.name %></td>
-            </tr>
-            <tr>
-              <td><%= shop.address %></td>
-            </tr>
-            <tr>
-              <td<%= shop.open %></td>
-            </tr>
-            <tr>
-              <td><%= shop.budget.average %></td>
-            </tr>
-            <tr>
-              <td><%= link_to(shop.contact, "食べログで見る") %></td>
-            </tr>
-          </table>
-        <td>
-          <%- if shop.photo.pc.l %>
-              <%= image_tag(shop.photo.pc.l) %>
-          <%- end %>
-        </td>
-      </tr>
-  <%- end %>
-</table>
+<div class="container">
+  <div class="result_wrap">
+    <h3>YOUR MEMBER</h3>
+    <div id="matched_group">
+      <%- @users.each do |user| %>
+          <%= render :partial => "user_icon", :locals => { :name => user.nick_name, :icon_path => user.icon_path } %>
+      <%- end %>
+    </div>
+    <div id="store_list">
+      <%- @shops.each_with_index do |shop, idx| %>
+          <div class="flex-container">
+            <div class="sotre flex-left">
+              <p class="rank">RECOMMEND <%= idx %></p>
+              <p class="store_name"><%= shop.name %></p>
+              <p class="store_address"><%= shop.address %></p>
+              <p class="money"><%= shop.budget.average %></p>
+              <p class="tabelog_link"><%= link_to(shop.contact, "食べログで見る") %></p>
+            </div>
+            <div class="flex-right">
+              <p class="food_img"><%= image_tag(shop.photo.pc.l) %></p>
+            </div>
+          </div>
+      <%- end %>
+    </div>
+  </div>
+</div>
+</div>
