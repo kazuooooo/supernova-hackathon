@@ -1,18 +1,18 @@
-<div>
-  <%- @keywords.each do |keyword| %>
-      <li>
-        <%= keyword.keys.first %>
-        <%= keyword[keyword.keys.first][0] %>
-        <%= keyword[keyword.keys.first][1] %>
-      </li>
-  <%- end %>
-</div>
 <div class="container">
   <div class="result_wrap">
     <h3>YOUR MEMBER</h3>
     <div id="matched_group">
       <%- @users.each do |user| %>
           <%= render :partial => "user_icon", :locals => { :name => user.nick_name, :icon_path => user.icon_path } %>
+      <%- end %>
+    </div>
+    <div>
+      <%- @keywords.each do |keyword| %>
+          <li>
+            <%= keyword.keys.first %>
+            <%= keyword[keyword.keys.first][0] %>
+            <%= keyword[keyword.keys.first][1] %>
+          </li>
       <%- end %>
     </div>
     <div id="store_list">
@@ -31,6 +31,7 @@
           </div>
       <%- end %>
     </div>
+    <div style="height: 30px">もっと見る</div>
   </div>
 </div>
 </div>

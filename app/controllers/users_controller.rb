@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     user_phenotypes = @users.map { |user| user.get_phenotypes }
     @calc_result    = Calculator.instance.sum(user_phenotypes)
     @keywords        = Detector.instance.detect(@calc_result)
-    @shops          = ShopClient.instance.search_keywords(@keywords.map { |elem| elem.keys }.flatten)
+    @shops          = ShopClient.instance.search_keywords(@keywords.map { |elem| elem.keys }.flatten).take(5)
     @keys           = @shops.first.to_h.keys
   end
 end
