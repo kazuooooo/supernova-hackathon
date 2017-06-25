@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'PixelGosub';
+    src: asset-url('Pixel_Gosub.otf')
+}
+*{
+    font-family: 'PixelGosub';
+    color: #00c5f8;
+}
+
+body {
+    /*overflow: hidden;*/
+    padding-top: 50px;
+}
+
+/* 共通 */
+.wrap {
+    padding: 10px;
+    text-align: center;
+    height: 75vh;
+    overflow: hidden;
+}
+.icon{
+    width: 60px;
+    border-radius: 50%;
+}
+
+/*マッチング画面*/
+#ripple{
+
+}
+#ripple .circle{
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #00c5f8;
+    z-index: -1;
+}
+#ripple div:nth-child(1){
+    width: 10px;
+    height: 10px;
+    top: calc(52% - 10px/2);
+    left: calc(50% - 10px/2);
+}
+#ripple div:nth-child(2){
+    width: 100px;
+    height: 100px;
+    top: calc(52% - 100px/2);
+    left: calc(50% - 100px/2);
+}
+#ripple div:nth-child(3){
+    width: 200px;
+    height: 200px;
+    top: calc(52% - 200px/2);
+    left: calc(50% - 200px/2);
+}
+#ripple div:nth-child(4){
+    width: 300px;
+    height: 300px;
+    top: calc(52% - 300px/2);
+    left: calc(50% - 300px/2);
+}
+#ripple div:nth-child(5){
+    width: 400px;
+    height: 400px;
+    top: calc(52% - 400px/2);
+    left: calc(50% - 400px/2);
+}
+
+.triangle img{
+    position: absolute;
+    top: calc(52% - 32px);
+    left: calc(50% - 32px);
+    width: 64px;
+}
+#users div{
+    position: absolute;
+    width: 60px;
+}
+#users .name{
+    margin: 60px auto 0;
+}
+#user1{
+    top: calc(52% - 230px);
+    left: calc(50%);
+}
+#user2{
+    top: calc(52%);
+    left: calc(50% + 100px);
+}
+#user3{
+    top: calc(52%);
+    left: calc(50% - 120px);
+}
+#user4{
+    top: calc(52% - 90px);
+    left: calc(50% + 90px);
+}
+#user5{
+    top: calc(52% - 220px);
+    left: calc(50% - 100px);
+}
+.icon.non_active{
+    border: solid 5px #00c5f8;
+}
+.icon.active{
+    border: solid 5px #fba138;
+}
+.arrow{
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+}
+.arrow img{
+    width: 80px;
+    height: 40px;
+    transform: rotate(-180deg);
+}
+
+/* グループ */
+#matched_group{
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+.matched_user{
+    display: inline-block;
+    margin: 0 10px;
+}
+.category button{
+    width: 40%;
+    height: 80px;
+    margin: 15px 2%;
+    background-color: #00c5f8;
+    border-radius: 5px;
+}
+.category div {
+    text-align: center;
+}
+.category_title{
+    margin-top: -10px;
+}
+.category_title img{
+    height: 15px;
+}
+.pict{
+    height: 40px;
+    vertical-align: bottom;
+}
