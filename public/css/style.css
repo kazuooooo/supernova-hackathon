@@ -31,6 +31,22 @@ html{
     width: 60px;
     border-radius: 50%;
 }
+.navbar-brand .img-rounded {
+    width:44px;
+    margin-top:-10px;
+}
+.profile_btn{
+    right: 0;
+    display: inline-block;
+    position: absolute;
+    color: #fba138;
+}
+ .profile_btn:visited{
+    color: #fba138;
+ }
+.profile_btn:hover{
+    color: #fcc07b;
+}
 
 /*マッチング画面*/
 #ripple{
@@ -111,6 +127,12 @@ html{
 }
 .icon.active{
     border: solid 5px #fba138;
+}
+.name.non_active{
+    color: #00c5f8;
+}
+.name.active{
+    color: #fba138;
 }
 .arrow{
     text-align: center;
