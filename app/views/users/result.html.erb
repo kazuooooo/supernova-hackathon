@@ -20,7 +20,7 @@
               <p class="store_name"><%= shop.name %></p>
               <p class="store_address"><%= shop.address %></p>
               <p class="money"><%= shop.budget.average %></p>
-              <p class="tabelog_link"><%= link_to(shop.contact, "食べログで見る") %></p>
+              <p class="tabelog_link"><%= link_to("食べログで見る", shop.urls.pc) %></p>
             </div>
             <div class="flex-right">
               <p class="food_img"><%= image_tag(shop.photo.pc.l) %></p>
