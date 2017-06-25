@@ -2,6 +2,10 @@
     font-family: 'PixelGosub';
     src: url('../font/Pixel_Gosub.otf') format('opentype')
 }
+@font-face {
+    font-family: 'FutoGoB';
+    src: url('../font/A-OTF-FutoGoB101Pro-Bold.otf') format('opentype')
+}
 *{
     font-family: 'PixelGosub';
     color: #00c5f8;
@@ -10,6 +14,10 @@
 body {
     /*overflow: hidden;*/
     padding-top: 50px;
+    height: 100%;
+}
+html{
+    height: 100%;
 }
 
 /* 共通 */
@@ -113,6 +121,7 @@ body {
     width: 80px;
     height: 40px;
     transform: rotate(-180deg);
+    
 }
 
 /* グループ */
@@ -131,6 +140,7 @@ body {
     margin: 15px 2%;
     background-color: #00c5f8;
     border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .category div {
     text-align: center;
@@ -144,4 +154,29 @@ body {
 .pict{
     height: 40px;
     vertical-align: bottom;
+}
+
+/*プロフィール*/
+.my_trend{
+    margin-top: 30px;
+}
+.my_trend td, .my_trend th{
+    font-family: 'FutoGoB';
+    text-align: center;
+}
+/*登録画面*/
+.register{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.register button{
+    color: #fff;
+    background-color: #00c5f8;
+    width: 120px;
+    height: 80px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
