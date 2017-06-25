@@ -1,11 +1,10 @@
 <div class="container">
   <div class="wrap">
     <h3>Your Profile</h3>
-    <%= render :partial => "user_icon", :locals => { :name => User.first.nick_name, :icon_path => User.first.icon_path } %>
+    <%= render :partial => "user_icon", :locals => { :name => User.third.nick_name, :icon_path => User.third.icon_path } %>
     <table class="my_trend table table-striped table-hover ">
       <thead>
       <tr>
-        <th>#</th>
         <th>項目</th>
         <th>スコア</th>
         <th>詳細</th>
